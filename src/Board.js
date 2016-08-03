@@ -144,7 +144,7 @@
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow, row) {
       var rows = this.rows();
       var i = majorDiagonalColumnIndexAtFirstRow;
-      var j = row;
+      var j = row || 0;
       var pieceCount = 0;
       for (i; i < rows.length && j < rows.length; i++, j++) {
         if(rows[j][i]) {
@@ -183,7 +183,7 @@
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow, row) {
       var rows = this.rows();
       var i = minorDiagonalColumnIndexAtFirstRow;
-      var j = row;
+      var j = row || 0;
       var pieceCount = 0;
       for (j; i >= 0 && j < rows.length; i--, j++) {
         if(rows[j][i]) {

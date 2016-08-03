@@ -16,8 +16,24 @@
 
 
 window.findNRooksSolution = function(n) {
-  var solution = undefined; //fixme
+  var solutions = [];
+  // recursive function that takes  count and current solution
+  // base casepushes the solution to solutions if count is zero and return
+  // make an empty array for n x n
+  // place element on first spot and check all other spots, place at any
+  // available spots
+  var count = n;
+  var array = makeEmptyMatrix(n);
+  var solver = function(count, array) {
+    if (count === 0) {
+      solutions.push(array);
+      return;
+    }
+  };
 
+
+  var randomSolution = Math.floor(Math.random() * solutions.length);
+  var solution = solution[randomSolution];
   console.log('Single solution for ' + n + ' rooks:', JSON.stringify(solution));
   return solution;
 };
